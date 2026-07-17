@@ -1,0 +1,33 @@
+Title
+
+Objective
+
+Introduction
+
+Theory
+
+Why?
+
+Requirements
+
+Steps
+
+Commands
+
+Command Explanation
+
+Expected Output
+
+Verification
+
+Screenshots
+
+Common Errors
+
+Troubleshooting
+
+Summary
+
+Key Takeaways
+
+Next Chapter
