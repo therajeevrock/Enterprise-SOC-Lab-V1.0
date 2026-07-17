@@ -26,3 +26,6 @@ Thumbs.db
 # Temporary
 *.tmp
 *.bak
+
+# Overview
+*.00-Project-Overview.md
