@@ -144,6 +144,39 @@ Path:
 dashboards/screenshots/08-dashboard-library.png
 
 
+## Step 9 - Add the Total Alerts Widget to the Dashboard
+
+After verifying that the **SOC - Total Alerts** visualization has been successfully saved, add it to the **Enterprise SOC - Overview** dashboard.
+
+Navigate to:
+
+```text
+Menu
+    └── Explore
+          └── Dashboards
+```
+
+Open:
+
+```text
+Enterprise SOC - Overview
+```
+
+Click **Edit**, then select **Add**.
+
+The **Add Panels** window opens, displaying all saved visualizations.
+
+Select the **SOC - Total Alerts** visualization and click **Save** to add the widget to the dashboard.
+
+### Screenshot
+
+**Image #09**
+
+```text
+dashboards/screenshots/add-total-alerts-widget.png
+```
+
+
 # Widget 02 - Critical Alerts
 
 ## Objective
@@ -452,3 +485,522 @@ This allows SOC analysts to quickly monitor the number of alerts across each sev
 
 ```text
 dashboards/screenshots/enterprise-soc-overview-dashboard.png
+
+
+# Widget 03 - Active Agents
+
+## Objective
+
+The **Active Agents** widget displays the total number of Wazuh agents that are currently active and communicating with the Wazuh Manager.
+
+This widget helps SOC analysts quickly verify endpoint availability and ensure that monitored systems are actively reporting security events.
+
+---
+
+### Step 1 - Verify the Default Agent Summary
+
+Before creating the visualization, verify the default **Agents Summary** widget provided by Wazuh.
+
+Navigate to:
+
+```text
+Overview
+```
+
+Locate the **Agents Summary** widget and verify that it displays the current agent status, including:
+
+- Active
+- Disconnected
+
+This widget will be used as the reference for creating the custom **Active Agents** visualization in the Enterprise SOC Dashboard.
+
+### Screenshot
+
+**Image #01**
+
+```text
+dashboards/screenshots/dashboard-overview.png
+```
+
+---
+
+## Step 2 - Verify the Agent Status
+
+Click the **Agents Summary** widget.
+
+The **Endpoints → Agents** page opens, displaying detailed information about all enrolled Wazuh agents.
+
+Verify that the following agent status information is available:
+
+- Active
+- Disconnected
+- Pending
+- Never connected
+
+Also verify that the required monitoring information is available, including the agent **ID**, **Name**, **IP Address**, and **Status**.
+
+This confirms that the required monitoring data is available before creating the visualization.
+
+### Screenshot
+
+**Image #02**
+
+```text
+dashboards/screenshots/open-agent-details.png
+```
+
+---
+
+## Step 3 - Open the Enterprise SOC Dashboard
+
+From the Wazuh Dashboard, navigate to the custom dashboard created for this project.
+
+Open:
+
+```text
+Enterprise SOC - Overview
+```
+
+This dashboard will be used to create and manage custom SOC monitoring widgets.
+
+### Screenshot
+
+**Image #02**
+
+```text
+dashboards/screenshots/open-enterprise-dashboard.png
+```
+
+---
+
+## Step 4 - Open the Dashboard in Edit Mode
+
+Open the previously created **Enterprise SOC - Overview** dashboard.
+
+Click the **Edit** button located in the **top-right corner** of the dashboard to enable editing mode.
+
+Editing mode allows new visualizations and widgets to be added to the dashboard.
+
+### Screenshot
+
+**Image #03**
+
+```text
+dashboards/screenshots/edit-soc-dashboard.png
+```
+
+---
+
+## Step 5 - Add a Dashboard Panel
+
+While the dashboard is in **Edit** mode, click **Add** from the top navigation bar.
+
+The **Add Panels** window opens, displaying all previously saved visualizations that can be added to the dashboard.
+
+### Screenshot
+
+**Image #04**
+
+```text
+dashboards/screenshots/open-add-panel.png
+```
+
+---
+
+## Step 6 - Create a New Visualization
+
+In the **Add Panels** window, click **Create new**.
+
+From the available options, select:
+
+```text
+Visualization
+```
+
+This opens the Visualization editor, where a new widget can be created and configured.
+
+### Screenshot
+
+**Image #05**
+
+```text
+dashboards/screenshots/select-visualization.png
+```
+
+---
+
+## Step 7 - Select the Metric Visualization
+
+The **New Visualization** window opens, displaying all available visualization types.
+
+Select the **Metric** visualization.
+
+A Metric visualization is designed to display a single numerical value, making it suitable for showing the total number of active Wazuh agents.
+
+### Screenshot
+
+**Image #06**
+
+```text
+dashboards/screenshots/select-metric-visualization.png
+```
+
+---
+
+## Step 8 - Select the Data Source
+
+After selecting the **Metric** visualization, the **Choose a source** window appears.
+
+Select the following data source:
+
+```text
+wazuh-monitoring-*
+```
+
+> **Note**
+>
+> Use **wazuh-monitoring-*** because this index stores agent monitoring information such as agent status, heartbeat, connectivity, and health data. It is the appropriate data source for creating the **Active Agents** widget.
+
+### Screenshot
+
+**Image #07**
+
+```text
+dashboards/screenshots/select-monitoring-data-source.png
+```
+
+---
+
+## Step 9 - Configure the Active Agents Metric
+
+The **Metric** visualization is now created, but it currently displays all monitoring records from the **wazuh-monitoring-*** index.
+
+To display only the total number of **active Wazuh agents**, configure the metric as follows.
+
+### Metric Aggregation
+
+Select:
+
+- **Aggregation:** `Unique Count`
+- **Field:** `id`
+
+> **Note**
+>
+> Do **not** use the **Count** aggregation.
+>
+> The `wazuh-monitoring-*` index stores multiple monitoring records (heartbeats) for the same agent. Using **Count** would count every monitoring record instead of the actual number of agents.
+>
+> Using **Unique Count** on the **id** field ensures that each Wazuh agent is counted only once, providing an accurate total of active agents.
+
+Next, click **Add filter** and configure the following filter:
+
+| Field | Operator | Value |
+|--------|----------|-------|
+| `status` | `is` | `active` |
+
+After applying the filter, the visualization displays only agents that are currently active and communicating with the Wazuh Manager.
+
+### Screenshot
+
+**Image #08**
+
+```text
+dashboards/screenshots/configure-active-agents-status.png
+dashboards/screenshots/configure-active-agents-metric.png
+```
+
+---
+
+## Step 10 - Save the Visualization
+
+After configuring the metric, click the **Save** button located in the **top-right corner** of the Visualization page.
+
+The **Save Visualization** dialog will appear.
+
+Provide the following information:
+
+**Title**
+
+```text
+SOC - Active Agents
+```
+
+**Description**
+
+```text
+Displays the total number of unique Wazuh agents that are currently active and communicating with the Wazuh Manager.
+```
+
+Click **Save and return** to store the visualization in the Visualization Library.
+
+
+> **Note**
+>
+> Before click on **Save and return** enable **Add to Dashboards after saving**.
+
+### Screenshot
+
+**Image #09**
+
+```text
+dashboards/screenshots/save-active-agents-visualization.png
+```
+
+---
+
+## Step 11 - Save the Enterprise SOC Dashboard
+
+After clicking **Save and return**, the **SOC - Active Agents** visualization is automatically added to the **Enterprise SOC - Overview** dashboard.
+
+Review the widget to ensure it displays the correct number of active Wazuh agents.
+
+Finally, click **Save** in the **top-right corner** to save the updated dashboard.
+
+```md
+The newly created visualization is also available in the **Visualize** section and can be reused in other dashboards.
+
+Navigate to:
+
+```text
+Explore
+    └── Visualize
+
+### Screenshot
+
+**Image #10**
+
+```text
+dashboards/screenshots/updated-active-agents-dashboard.png
+```
+
+---
+
+> **Result**
+>
+> The **SOC - Active Agents** widget is now successfully added to the **Enterprise SOC - Overview** dashboard and displays the total number of unique Wazuh agents that are currently active and communicating with the Wazuh Manager.
+
+
+# Widget 04 - Alerts Over Time
+
+## Objective
+
+The **Alerts Over Time** widget displays the number of security alerts generated during the selected time range.
+
+This visualization helps SOC analysts identify alert spikes, monitor alert trends, and determine when suspicious activity occurred.
+
+---
+
+## Step 1 - Open the Enterprise SOC Dashboard
+
+From the Wazuh Dashboard, navigate to the custom dashboard created for this project.
+
+Open:
+
+```text
+Enterprise SOC - Overview
+```
+
+This dashboard will be used to create and manage custom SOC monitoring widgets.
+
+### Screenshot
+
+**Image #01**
+
+```text
+dashboards/screenshots/open-enterprise-dashboard.png
+```
+
+---
+
+## Step 2 - Open the Dashboard in Edit Mode
+
+Open the previously created **Enterprise SOC - Overview** dashboard.
+
+Click the **Edit** button located in the **top-right corner** of the dashboard to enable editing mode.
+
+Editing mode allows new visualizations and widgets to be added to the dashboard.
+
+### Screenshot
+
+**Image #02**
+
+```text
+dashboards/screenshots/edit-soc-dashboard.png
+```
+
+---
+
+## Step 3 - Add a Dashboard Panel
+
+While the dashboard is in **Edit** mode, click **Add** from the top navigation bar.
+
+The **Add Panels** window opens, displaying all previously saved visualizations available for reuse.
+
+### Screenshot
+
+**Image #03**
+
+```text
+dashboards/screenshots/open-panel.png
+```
+
+---
+
+## Step 4 - Create a New Visualization
+
+In the **Add Panels** window, click **Create new**.
+
+From the available options, select:
+
+```text
+Visualization
+```
+
+This opens the Visualization editor, where a new widget can be created and configured.
+
+### Screenshot
+
+**Image #04**
+
+```text
+dashboards/screenshots/select-visualization.png
+```
+
+---
+
+## Step 5 - Select the Line Visualization
+
+The **New Visualization** window opens, displaying all available visualization types.
+
+Select the **Line** visualization.
+
+A Line visualization is ideal for displaying alert trends over time, allowing SOC analysts to quickly identify spikes and changes in alert activity.
+
+### Screenshot
+
+**Image #05**
+
+```text
+dashboards/screenshots/select-line-visualization.png
+```
+
+---
+
+## Step 6 - Select the Data Source
+
+After selecting the **Line** visualization, the **Choose a source** window appears.
+
+Select the following data source:
+
+```text
+wazuh-alerts-*
+```
+
+> **Note**
+>
+> Use **wazuh-alerts-*** because this index contains security alerts generated by the Wazuh Rule Engine. These alerts are used to visualize alert activity over time.
+
+### Screenshot
+
+**Image #06**
+
+```text
+dashboards/screenshots/alert-data-source.png
+```
+
+## Step 7 - Configure the Alert Trend
+
+The Line visualization is now created, but it currently displays all alert documents without grouping them by time.
+
+Configure the visualization using the following settings:
+
+### Y-Axis
+
+- **Aggregation:** `Count`
+
+### X-Axis
+
+- **Aggregation:** `Date Histogram`
+- **Field:** `@timestamp`
+- **Minimum Interval:** `Auto`
+- **Drop partial buckets** `OFF`
+
+The **Count** aggregation calculates the total number of alerts, while the **Date Histogram** groups those alerts based on their timestamp.
+
+This configuration produces a time-based visualization that displays how alert activity changes throughout the selected time range.
+
+### Screenshot
+
+**Image #07**
+
+```text
+dashboards/screenshots/configure-alerts-over-time.png
+```
+
+## Step 8 - Save the Visualization
+
+After configuring the visualization, click the **Save** button located in the **top-right corner** of the page.
+
+The **Save Visualization** dialog will appear.
+
+Provide the following information:
+
+**Title**
+
+```text
+SOC - Alerts Over Time
+```
+
+**Description**
+
+```text
+Displays the number of security alerts generated over time, helping SOC analysts identify alert trends, activity spikes, and unusual patterns within the selected time range.
+```
+
+Click **Save and return** to store the visualization in the Visualization Library.
+
+> **Note**
+>
+> Before clicking **Save and return**, enable **Add to Dashboards after saving**.
+
+### Screenshot
+
+**Image #08**
+
+```text
+dashboards/screenshots/save-alerts-over-time-visualization.png
+```
+
+---
+
+## Step 9 - Save the Enterprise SOC Dashboard
+
+After clicking **Save and return**, the **SOC - Alerts Over Time** visualization is automatically added to the **Enterprise SOC - Overview** dashboard.
+
+Review the visualization to ensure that the alert trend is displayed correctly across the selected time range.
+
+Finally, click **Save** in the **top-right corner** to save the updated dashboard.
+
+The newly created visualization is also available in the **Visualize** section and can be reused in other dashboards.
+
+Navigate to:
+
+```text
+Explore
+    └── Visualize
+```
+
+### Screenshot
+
+**Image #09**
+
+```text
+dashboards/screenshots/updated-alerts-over-time-dashboard.png
+```
+
+---
+
+> **Result**
+>
+> The **SOC - Alerts Over Time** widget is now successfully added to the **Enterprise SOC - Overview** dashboard and provides a time-based view of alert activity, enabling SOC analysts to quickly identify trends, spikes, and periods of increased security events.
+
