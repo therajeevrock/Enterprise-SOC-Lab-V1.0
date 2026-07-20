@@ -1436,204 +1436,58 @@ dashboards/screenshots/updated-top-mitre-techniques-dashboard.png
 > The **SOC - Top MITRE ATT&CK Techniques** widget has been successfully added to the **Enterprise SOC - Overview** dashboard. It provides a high-level view of the most frequently detected MITRE ATT&CK techniques, enabling SOC analysts to understand attacker behavior, prioritize investigations, and evaluate detection coverage across the monitored environment.
 
 
+## Final Dashboard Documentation
 
+### Dashboard Layout Recommendation
 
+The **Enterprise SOC - Overview** dashboard is organized to provide SOC analysts with a clear and structured view of the most important security metrics.
 
+The layout is designed to prioritize critical information while minimizing scrolling during day-to-day monitoring and incident response.
 
+### Dashboard Layout
 
+**First Row – Key Security Metrics**
 
+- Total Alerts
+- Critical Alerts
+- High Alerts
+- Medium Alerts
+- Low Alerts
+- Active Agents
 
+These metric widgets provide an immediate overview of the current security posture and endpoint availability.
 
+---
 
+**Second Row – Security Trends and ATT&CK Mapping**
 
+- Alerts Over Time
+- Top MITRE ATT&CK Techniques
 
+This section helps analysts identify changes in alert activity and understand the most frequently observed attacker techniques within the selected time range.
 
+---
 
+**Third Row – Top Detection Rules**
 
+- Top Alert Rules
 
+This visualization highlights the most frequently triggered Wazuh detection rules, allowing analysts to quickly identify recurring threats, noisy detections, and suspicious activity.
 
+---
 
+The overall dashboard layout provides a centralized operational view of the Enterprise SOC environment, enabling analysts to quickly assess security events, monitor trends, understand attacker behavior, and prioritize investigations from a single dashboard.
 
+## Final Enterprise SOC - Overview Dashboard
 
+The completed **Enterprise SOC - Overview** dashboard combines all custom visualizations created throughout this section into a single monitoring interface.
 
+It provides SOC analysts with real-time visibility into alert severity, endpoint status, alert trends, detection rules, and MITRE ATT&CK techniques, making it the primary dashboard for monitoring the Enterprise SOC Lab.
 
+### Screenshot
 
+**Final Enterprise SOC - Overview Dashboard**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Dashboard Layout Recommendation
-
-Arrange the dashboard widgets to maximize readability and efficiently use the available screen space.
-
-Recommended layout:
-
-- First Row
-  - Total Alerts
-  - Critical Alerts
-  - High Alerts
-  - Medium Alerts
-  - Low Alerts
-  - Active Agents
-
-- Second Row
-  - Alerts Over Time
-
-- Third Row
-  - Top Alert Rules
-  - Top MITRE ATT&CK Techniques
-
-This layout provides a clear operational overview while keeping the most important metrics visible without excessive scrolling.
+```text
+dashboards/screenshots/final-enterprise-soc-overview-dashboard.png
+```
