@@ -2,18 +2,17 @@
 
 ## Overview
 
-The SOC Overview dashboard was created to provide SOC analysts with a centralized view of security events generated within the Enterprise SOC Lab.
+The **Enterprise SOC - Overview** dashboard provides SOC analysts with a centralized, high-level view of the overall security posture of the Enterprise SOC Lab.
 
-Instead of navigating multiple Wazuh modules, analysts can quickly review alert volume, identify suspicious activity, and begin investigations from a single dashboard.
-
-This dashboard serves as the primary monitoring interface for the lab and will be expanded throughout this project with additional widgets such as Critical Alerts, Alert Trends, MITRE ATT&CK mapping, and Top Detection Rules.
+Instead of navigating multiple Wazuh modules, analysts can quickly monitor alert volume, alert severity, endpoint availability, and overall security activity from a single dashboard. This dashboard serves as the primary entry point for SOC monitoring, enabling analysts to rapidly assess the health of the environment before moving to specialized dashboards for endpoint monitoring, threat detection, MITRE ATT&CK analysis, and detection analytics.
 
 ## Objective
 
-- Build a centralized SOC monitoring dashboard.
-- Display security alerts in real time.
-- Reduce investigation time by providing quick visibility.
-- Simulate an enterprise SOC monitoring environment.
+- Provide a centralized overview of the Enterprise SOC environment.
+- Monitor overall alert volume and severity in real time.
+- Display endpoint availability and security activity trends.
+- Enable rapid assessment of the organization's security posture.
+- Serve as the primary entry point for security monitoring and incident analysis.
 
 ---
 
@@ -24,7 +23,7 @@ This dashboard serves as the primary monitoring interface for the lab and will b
 | Dashboard Name | Enterprise SOC - Overview |
 | Platform | Wazuh Dashboard |
 | Visualization Engine | OpenSearch Dashboards |
-| Data Source | wazuh-alerts-* |
+| Data Source | wazuh-alerts-* | wazuh-monitoring-* |
 | Time Filter | Last 24 Hours |
 
 ---
@@ -173,7 +172,7 @@ Select the **SOC - Total Alerts** visualization and click **Save** to add the wi
 **Image #09**
 
 ```text
-dashboards/screenshots/dashboard-01/add-total-alerts-widget.png
+dashboards/screenshots/dashboard-01/09-add-total-alerts-widget.png
 ```
 
 ## Step 10 - Save the Enterprise SOC Dashboard
@@ -210,7 +209,7 @@ Explore
 **Image #10**
 
 ```text
-dashboards/screenshots/dashboard-01/updated-enterprise-soc-visualization.png
+dashboards/screenshots/dashboard-01/10-updated-enterprise-soc-visualization.png
 ```
 
 
@@ -249,7 +248,7 @@ This confirms the correct severity range used by Wazuh for Critical Alerts.
 **Image #01**
 
 ```
-dashboards/screenshots/dashboard-01/dashboard-overview.png
+dashboards/screenshots/dashboard-01/11-dashboard-overview.png
 ```
 
 ---
@@ -259,7 +258,7 @@ dashboards/screenshots/dashboard-01/dashboard-overview.png
 **Image #02**
 
 ```
-dashboards/screenshots/dashboard-01/verify-critical-rule-level.png
+dashboards/screenshots/dashboard-01/12-verify-critical-rule-level.png
 ```
 
 ---
@@ -280,7 +279,7 @@ Explore
 **Image #03**
 
 ```
-dashboards/screenshots/dashboard-01/open-navigation-menu.png
+dashboards/screenshots/dashboard-01/13-open-navigation-menu.png
 ```
 
 ---
@@ -295,16 +294,7 @@ Enterprise SOC - Overview
 
 This dashboard will contain all custom SOC monitoring widgets.
 
-### Screenshot
-
-**Image #04**
-
-```
-dashboards/screenshots/dashboard-01/open-enterprise-dashboard.png
-```
-
 ---
-
 
 ## Step 4 - Open the Dashboard in Edit Mode
 
@@ -321,7 +311,7 @@ Editing mode allows new visualizations, panels, and widgets to be added to the d
 Path:
 
 ```text
-dashboards/screenshots/dashboard-01/edit-enterprise-soc-dashboard.png
+dashboards/screenshots/dashboard-01/14-edit-enterprise-soc-dashboard.png
 ```
 
 ## Step 5 - Add a Dashboard Panel
@@ -337,7 +327,7 @@ The **Add Panels** window will open, displaying all saved visualizations availab
 Path:
 
 ```text
-dashboards/screenshots/dashboard-01/open-add-panel.png
+dashboards/screenshots/dashboard-01/15-open-add-panel.png
 ```
 
 ## Step 6 - Create a New Visualization
@@ -359,7 +349,7 @@ This option opens the Visualization editor, where a new widget can be created an
 Path:
 
 ```text
-dashboards/screenshots/dashboard-01/select-visualization.png
+dashboards/screenshots/dashboard-01/16-select-visualization.png
 ```
 
 ## Step 7 - Select the Metric Visualization
@@ -377,7 +367,7 @@ The Metric visualization is used to display a single numerical value, making it 
 Path:
 
 ```text
-dashboards/screenshots/dashboard-01/select-metric-visualization.png
+dashboards/screenshots/dashboard-01/17-select-metric-visualization.png
 ```
 
 ## Step 8 - Select the Data Source
@@ -397,7 +387,7 @@ From the available data sources, select **wazuh-alerts-\***.
 Path:
 
 ```text
-dashboards/screenshots/dashboard-01/select-alert-data-source.png
+dashboards/screenshots/dashboard-01/18-select-alert-data-source.png
 ```
 
 ## Step 9 - Add Alert Filters
@@ -428,7 +418,7 @@ After applying these filters, the metric will display only **Critical severity a
 **Image #09 – Add Filters for Critical Alerts**
 
 ```text
-dashboards/screenshots/dashboard-01/add-critical-filters.png
+dashboards/screenshots/dashboard-01/19-add-critical-filters.png
 ```
 
 ## Step 10 - Save the Visualization
@@ -456,7 +446,7 @@ Displays all critical security alerts (Rule Level 15+) generated by the Wazuh Ru
 **Image #12 – **Updated Enterprise SOC Dashoboard**
 
 ```text
-dashboards/screenshots/dashboard-01/save-critical-visualization.png
+dashboards/screenshots/dashboard-01/20-save-critical-visualization.png
 ```
 
 ## Step 11 - Save the Enterprise SOC Dashboard
@@ -473,7 +463,7 @@ Finally, click **Save** in the top-right corner to save the updated dashboard.
 **Image #12 – **Updated Enterprise SOC Dashoboard**
 
 ```text
-dashboards/screenshots/dashboard-01/Updated-SOC-dashboard.png
+dashboards/screenshots/dashboard-01/21-Updated-SOC-dashboard.png
 ```
 
 > **Result**
@@ -485,7 +475,7 @@ dashboards/screenshots/dashboard-01/Updated-SOC-dashboard.png
 **Image #13 – Critical Alert Widget Added to Dashboard**
 
 ```text
-dashboards/screenshots/dashboard-01/critical-widget-added-dashboard.png
+dashboards/screenshots/dashboard-01/22-critical-widget-added-dashboard.png
 ```
 
 ## Create High, Medium, and Low Alert Widgets
@@ -521,7 +511,7 @@ This allows SOC analysts to quickly monitor the number of alerts across each sev
 **Image #14 – Enterprise SOC - Overview Dashboard**
 
 ```text
-dashboards/screenshots/dashboard-01/enterprise-soc-overview-dashboard.png
+dashboards/screenshots/dashboard-01/23-enterprise-soc-overview-dashboard.png
 
 
 # Widget 03 - Active Agents
@@ -551,14 +541,6 @@ Locate the **Agents Summary** widget and verify that it displays the current age
 
 This widget will be used as the reference for creating the custom **Active Agents** visualization in the Enterprise SOC Dashboard.
 
-### Screenshot
-
-**Image #01**
-
-```text
-dashboards/screenshots/dashboard-01/dashboard-overview.png
-```
-
 ---
 
 ## Step 2 - Verify the Agent Status
@@ -583,7 +565,7 @@ This confirms that the required monitoring data is available before creating the
 **Image #02**
 
 ```text
-dashboards/screenshots/dashboard-01/open-agent-details.png
+dashboards/screenshots/dashboard-01/24-open-agent-details.png
 ```
 
 ---
@@ -600,14 +582,6 @@ Enterprise SOC - Overview
 
 This dashboard will be used to create and manage custom SOC monitoring widgets.
 
-### Screenshot
-
-**Image #02**
-
-```text
-dashboards/screenshots/dashboard-01/open-enterprise-dashboard.png
-```
-
 ---
 
 ## Step 4 - Open the Dashboard in Edit Mode
@@ -618,14 +592,6 @@ Click the **Edit** button located in the **top-right corner** of the dashboard t
 
 Editing mode allows new visualizations and widgets to be added to the dashboard.
 
-### Screenshot
-
-**Image #03**
-
-```text
-dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
-```
-
 ---
 
 ## Step 5 - Add a Dashboard Panel
@@ -633,14 +599,6 @@ dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
 While the dashboard is in **Edit** mode, click **Add** from the top navigation bar.
 
 The **Add Panels** window opens, displaying all previously saved visualizations that can be added to the dashboard.
-
-### Screenshot
-
-**Image #04**
-
-```text
-dashboards/screenshots/dashboard-01/open-add-panel.png
-```
 
 ---
 
@@ -656,14 +614,6 @@ Visualization
 
 This opens the Visualization editor, where a new widget can be created and configured.
 
-### Screenshot
-
-**Image #05**
-
-```text
-dashboards/screenshots/dashboard-01/select-visualization.png
-```
-
 ---
 
 ## Step 7 - Select the Metric Visualization
@@ -673,14 +623,6 @@ The **New Visualization** window opens, displaying all available visualization t
 Select the **Metric** visualization.
 
 A Metric visualization is designed to display a single numerical value, making it suitable for showing the total number of active Wazuh agents.
-
-### Screenshot
-
-**Image #06**
-
-```text
-dashboards/screenshots/dashboard-01/select-metric-visualization.png
-```
 
 ---
 
@@ -703,7 +645,7 @@ wazuh-monitoring-*
 **Image #07**
 
 ```text
-dashboards/screenshots/dashboard-01/select-monitoring-data-source.png
+dashboards/screenshots/dashboard-01/25-select-monitoring-data-source.png
 ```
 
 ---
@@ -742,8 +684,8 @@ After applying the filter, the visualization displays only agents that are curre
 **Image #08**
 
 ```text
-dashboards/screenshots/dashboard-01/configure-active-agents-status.png
-dashboards/screenshots/dashboard-01/configure-active-agents-metric.png
+dashboards/screenshots/dashboard-01/26-configure-active-agents-status.png
+dashboards/screenshots/dashboard-01/27-configure-active-agents-metric.png
 ```
 
 ---
@@ -780,7 +722,7 @@ Click **Save and return** to store the visualization in the Visualization Librar
 **Image #09**
 
 ```text
-dashboards/screenshots/dashboard-01/save-active-agents-visualization.png
+dashboards/screenshots/dashboard-01/28-save-active-agents-visualization.png
 ```
 
 ---
@@ -807,7 +749,7 @@ Explore
 **Image #10**
 
 ```text
-dashboards/screenshots/dashboard-01/updated-active-agents-dashboard.png
+dashboards/screenshots/dashboard-01/29-updated-active-agents-dashboard.png
 ```
 
 ---
@@ -839,14 +781,6 @@ Enterprise SOC - Overview
 
 This dashboard will be used to create and manage custom SOC monitoring widgets.
 
-### Screenshot
-
-**Image #01**
-
-```text
-dashboards/screenshots/dashboard-01/open-enterprise-dashboard.png
-```
-
 ---
 
 ## Step 2 - Open the Dashboard in Edit Mode
@@ -857,14 +791,6 @@ Click the **Edit** button located in the **top-right corner** of the dashboard t
 
 Editing mode allows new visualizations and widgets to be added to the dashboard.
 
-### Screenshot
-
-**Image #02**
-
-```text
-dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
-```
-
 ---
 
 ## Step 3 - Add a Dashboard Panel
@@ -872,14 +798,6 @@ dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
 While the dashboard is in **Edit** mode, click **Add** from the top navigation bar.
 
 The **Add Panels** window opens, displaying all previously saved visualizations available for reuse.
-
-### Screenshot
-
-**Image #03**
-
-```text
-dashboards/screenshots/dashboard-01/open-panel.png
-```
 
 ---
 
@@ -894,14 +812,6 @@ Visualization
 ```
 
 This opens the Visualization editor, where a new widget can be created and configured.
-
-### Screenshot
-
-**Image #04**
-
-```text
-dashboards/screenshots/dashboard-01/select-visualization.png
-```
 
 ---
 
@@ -918,7 +828,7 @@ A Line visualization is ideal for displaying alert trends over time, allowing SO
 **Image #05**
 
 ```text
-dashboards/screenshots/dashboard-01/select-line-visualization.png
+dashboards/screenshots/dashboard-01/30-select-line-visualization.png
 ```
 
 ---
@@ -937,13 +847,6 @@ wazuh-alerts-*
 >
 > Use **wazuh-alerts-*** because this index contains security alerts generated by the Wazuh Rule Engine. These alerts are used to visualize alert activity over time.
 
-### Screenshot
-
-**Image #06**
-
-```text
-dashboards/screenshots/dashboard-01/alert-data-source.png
-```
 
 ## Step 7 - Configure the Alert Trend
 
@@ -971,7 +874,7 @@ This configuration produces a time-based visualization that displays how alert a
 **Image #07**
 
 ```text
-dashboards/screenshots/dashboard-01/configure-alerts-over-time.png
+dashboards/screenshots/dashboard-01/31-configure-alerts-over-time.png
 ```
 
 ## Step 8 - Save the Visualization
@@ -1005,7 +908,7 @@ Click **Save and return** to store the visualization in the Visualization Librar
 **Image #08**
 
 ```text
-dashboards/screenshots/dashboard-01/save-alerts-over-time-visualization.png
+dashboards/screenshots/dashboard-01/32-save-alerts-over-time-visualization.png
 ```
 
 ---
@@ -1032,7 +935,7 @@ Explore
 **Image #09**
 
 ```text
-dashboards/screenshots/dashboard-01/updated-alerts-over-time-dashboard.png
+dashboards/screenshots/dashboard-01/33-updated-alerts-over-time-dashboard.png
 ```
 
 ---
@@ -1041,408 +944,14 @@ dashboards/screenshots/dashboard-01/updated-alerts-over-time-dashboard.png
 >
 > The **SOC - Alerts Over Time** widget is now successfully added to the **Enterprise SOC - Overview** dashboard and provides a time-based view of alert activity, enabling SOC analysts to quickly identify trends, spikes, and periods of increased security events.
 
-# Widget 05 - Top Alert Rules
-
-## Objective
-
-The **Top Alert Rules** widget displays the Wazuh detection rules that generate the highest number of security alerts during the selected time range.
-
-This visualization helps SOC analysts quickly identify the most frequently triggered detection rules, prioritize investigations, and detect abnormal activity across monitored systems.
-
-## Step 1 - Open the Enterprise SOC Dashboard
-
-From the Wazuh Dashboard, navigate to the custom dashboard created for this project.
-
-Open:
-
-```text
-Enterprise SOC - Overview
-```
-
-This dashboard will be used to create and manage custom SOC monitoring widgets.
-
-### Screenshot
-
-**Image #01**
-
-```text
-dashboards/screenshots/dashboard-01/open-enterprise-dashboard.png
-```
-
-## Step 2 - Open the Dashboard in Edit Mode
-
-Open the **Enterprise SOC - Overview** dashboard.
-
-Click the **Edit** button located in the **top-right corner** of the dashboard.
-
-Editing mode allows new visualizations to be created and added to the dashboard.
-
-### Screenshot
-
-**Image #02**
-
-```text
-dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
-```
-
-## Step 3 - Add a Dashboard Panel
-
-While the dashboard is in **Edit** mode, click **Add** from the top navigation bar.
-
-The **Add Panels** window opens.
-
-Click **Create new** and select:
-
-```text
-Visualization
-```
-
-### Screenshot
-
-**Image #03**
-
-```text
-dashboards/screenshots/dashboard-01/select-visualization.png
-```
-
-## Step 4 - Select the Visualization Type
-
-From the list of available visualizations, select:
-
-```text
-Horizontal Bar
-```
-
-A Horizontal Bar chart is ideal for displaying categorical data such as Wazuh rule names because it provides better readability for long labels and makes it easier to compare the most frequently triggered rules.
-
-### Screenshot
-
-**Image #04**
-
-```text
-dashboards/screenshots/dashboard-01/select-horizontal-bar.png
-```
-
-## Step 5 - Select the Data Source
-
-Choose the following index pattern as the data source:
-
-```text
-wazuh-alerts-*
-```
-
-This index stores all security alerts generated by the Wazuh Manager and will be used to build the visualization.
-
-### Screenshot
-
-**Image #05**
-
-```text
-dashboards/screenshots/dashboard-01/select-alerts-data-source.png
-```
-
-## Step 6 - Configure the Top Alert Rules Visualization
-
-Configure the Horizontal Bar chart using the following settings.
-
-### Y-Axis
-
-| Setting | Value |
-|---------|-------|
-| Aggregation | Count |
-
-### X-Axis (Buckets)
-
-| Setting | Value |
-|---------|-------|
-| Aggregation | Terms |
-| Field | rule.description |
-| Order By | Count |
-| Order | Descending |
-| Size | 10 |
-
-The **Count** aggregation calculates the total number of alerts, while the **Terms** aggregation groups alerts by their rule description.
-
-Sorting the results in descending order and limiting the size to **10** displays the ten most frequently triggered Wazuh detection rules during the selected time range.
-
-### Screenshot
-
-**Image #06**
-
-```text
-dashboards/screenshots/dashboard-01/configure-top-alert-rules.png
-```
-
-## Step 7 - Save the Visualization
-
-After configuring the visualization, click the **Update** button to apply the changes.
-
-Review the chart to ensure that the top alert rules are displayed correctly.
-
-Next, click **Save** in the **top-right corner**.
-
-Provide the following information:
-
-**Title**
-
-```text
-SOC - Top Alert Rules
-```
-
-**Description**
-
-```text
-Displays the top 10 Wazuh detection rules that generated the highest number of security alerts during the selected time range.
-```
-
-Enable:
-
-```text
-Add to Dashboards after saving
-```
-
-Then click **Save and return**.
-
-### Screenshot
-
-**Image #07**
-
-```text
-dashboards/screenshots/dashboard-01/save-top-alert-rules-visualization.png
-```
-
-## Step 8 - Save the Enterprise SOC Dashboard
-
-After clicking **Save and return**, the **SOC - Top Alert Rules** visualization is automatically added to the **Enterprise SOC - Overview** dashboard.
-
-Verify that the widget appears correctly and displays the most frequently triggered Wazuh detection rules.
-
-Finally, click **Save** in the **top-right corner** to save the updated dashboard.
-
-The visualization is also available for reuse under:
-
-```text
-Explore
-    └── Visualize
-```
-
-### Screenshot
-
-**Image #08**
-
-```text
-dashboards/screenshots/dashboard-01/updated-top-alert-rules-dashboard.png
-```
-
----
-
-> **Note**
->
-> Some Wazuh rule descriptions can be lengthy. If labels appear truncated, increase the dashboard panel size or open the visualization in full-screen mode for better readability.
-
-> **Result**
->
-> The **SOC - Top Alert Rules** widget has been successfully added to the **Enterprise SOC - Overview** dashboard. It enables SOC analysts to quickly identify the most frequently triggered detection rules, helping prioritize investigations and detect recurring security events.
-
-
-# Widget 06 - Top MITRE ATT&CK Techniques
-
-## Objective
-
-The **Top MITRE ATT&CK Techniques** widget displays the MITRE ATT&CK techniques that generated the highest number of security alerts during the selected time range.
-
-This visualization helps SOC analysts understand attacker behavior, identify commonly observed techniques, and evaluate detection coverage across the environment.
-
-## Step 1 - Open the Enterprise SOC Dashboard
-
-Open the following dashboard:
-
-```text
-Enterprise SOC - Overview
-```
-
-This dashboard will be updated by adding a new MITRE ATT&CK visualization.
-
-### Screenshot
-
-**Image #01**
-
-```text
-dashboards/screenshots/dashboard-01/open-enterprise-dashboard.png
-```
-
-## Step 2 - Edit the Dashboard
-
-Click **Edit** in the top-right corner of the dashboard.
-
-This enables dashboard customization and allows new visualizations to be created.
-
-### Screenshot
-
-**Image #02**
-
-```text
-dashboards/screenshots/dashboard-01/edit-soc-dashboard.png
-```
-
-## Step 3 - Create a New Visualization
-
-Click **Add** and select:
-
-```text
-Create new
-    └── Visualization
-```
-
-### Screenshot
-
-**Image #03**
-
-```text
-dashboards/screenshots/dashboard-01/create-new-visualization.png
-```
-
-## Step 4 - Select the Visualization Type
-
-Select the following visualization:
-
-```text
-Horizontal Bar
-```
-
-A Horizontal Bar chart provides better readability for MITRE ATT&CK technique names and makes it easier to compare the most frequently detected techniques.
-
-### Screenshot
-
-**Image #04**
-
-```text
-dashboards/screenshots/dashboard-01/select-horizontal-bar.png
-```
-
-## Step 5 - Select the Data Source
-
-Choose the following index pattern:
-
-```text
-wazuh-alerts-*
-```
-
-### Screenshot
-
-**Image #05**
-
-```text
-dashboards/screenshots/dashboard-01/select-alerts-data-source.png
-```
-
-## Step 6 - Configure the Top MITRE ATT&CK Techniques Visualization
-
-Configure the Horizontal Bar chart using the following settings.
-
-### Y-Axis
-
-| Setting | Value |
-|---------|-------|
-| Aggregation | Count |
-
-### X-Axis (Buckets)
-
-| Setting | Value |
-|---------|-------|
-| Aggregation | Terms |
-| Field | rule.mitre.technique |
-| Order By | Count |
-| Order | Descending |
-| Size | 10 |
-
-The **Count** aggregation calculates the total number of alerts, while the **Terms** aggregation groups alerts by their associated MITRE ATT&CK technique.
-
-Sorting the results in descending order and limiting the output to **10** displays the most frequently detected MITRE ATT&CK techniques within the selected time range.
-
-### Screenshot
-
-**Image #06**
-
-```text
-dashboards/screenshots/dashboard-01/configure-top-mitre-techniques.png
-```
-
-## Step 7 - Save the Visualization
-
-After configuring the visualization, click the **Update** button to apply the changes.
-
-Verify that the chart correctly displays the top MITRE ATT&CK techniques detected during the selected time range.
-
-Next, click **Save** in the **top-right corner**.
-
-Provide the following information:
-
-**Title**
-
-```text
-SOC - Top MITRE ATT&CK Techniques
-```
-
-**Description**
-
-```text
-Displays the top 10 MITRE ATT&CK techniques associated with security alerts, helping SOC analysts identify the most frequently observed attacker behaviors.
-```
-
-Enable:
-
-```text
-Add to Dashboards after saving
-```
-
-Then click **Save and return**.
-
-### Screenshot
-
-**Image #07**
-
-```text
-dashboards/screenshots/dashboard-01/save-top-mitre-techniques-visualization.png
-```
-
-## Step 8 - Save the Enterprise SOC Dashboard
-
-After clicking **Save and return**, the **SOC - Top MITRE ATT&CK Techniques** visualization is automatically added to the **Enterprise SOC - Overview** dashboard.
-
-Verify that the widget appears correctly and displays the most frequently detected MITRE ATT&CK techniques for the selected time range.
-
-Finally, click **Save** in the **top-right corner** to save the updated dashboard.
-
-The visualization is also available for reuse under:
-
-```text
-Explore
-    └── Visualize
-```
-
-### Screenshot
-
-**Image #08**
-
-```text
-dashboards/screenshots/dashboard-01/updated-top-mitre-techniques-dashboard.png
-```
-
----
-
-> **Result**
->
-> The **SOC - Top MITRE ATT&CK Techniques** widget has been successfully added to the **Enterprise SOC - Overview** dashboard. It provides a high-level view of the most frequently detected MITRE ATT&CK techniques, enabling SOC analysts to understand attacker behavior, prioritize investigations, and evaluate detection coverage across the monitored environment.
-
 
 ## Final Dashboard Documentation
 
 ### Dashboard Layout Recommendation
 
-The **Enterprise SOC - Overview** dashboard is organized to provide SOC analysts with a clear and structured view of the most important security metrics.
+The **Enterprise SOC - Overview** dashboard is designed to provide SOC analysts with a high-level overview of the security posture of the monitored environment.
 
-The layout is designed to prioritize critical information while minimizing scrolling during day-to-day monitoring and incident response.
+The dashboard prioritizes key security metrics and alert trends, enabling analysts to quickly assess the current state of the SOC before performing detailed investigations in dedicated dashboards.
 
 ### Dashboard Layout
 
@@ -1455,39 +964,30 @@ The layout is designed to prioritize critical information while minimizing scrol
 - Low Alerts
 - Active Agents
 
-These metric widgets provide an immediate overview of the current security posture and endpoint availability.
+These metric widgets provide an immediate overview of the total alert volume, alert severity distribution, and the operational status of monitored endpoints.
 
 ---
 
-**Second Row – Security Trends and ATT&CK Mapping**
+**Second Row – Alert Trends**
 
 - Alerts Over Time
-- Top MITRE ATT&CK Techniques
 
-This section helps analysts identify changes in alert activity and understand the most frequently observed attacker techniques within the selected time range.
-
----
-
-**Third Row – Top Detection Rules**
-
-- Top Alert Rules
-
-This visualization highlights the most frequently triggered Wazuh detection rules, allowing analysts to quickly identify recurring threats, noisy detections, and suspicious activity.
+This visualization displays the trend of security alerts over the selected time range, allowing SOC analysts to identify spikes in activity, monitor changes in the alert volume, and recognize periods of increased security events.
 
 ---
 
-The overall dashboard layout provides a centralized operational view of the Enterprise SOC environment, enabling analysts to quickly assess security events, monitor trends, understand attacker behavior, and prioritize investigations from a single dashboard.
+The dashboard layout focuses on providing a concise operational overview without overwhelming the analyst with detailed detection or threat intelligence information. More detailed analysis is available in the dedicated **Threat Detection**, **MITRE ATT&CK Analysis**, and **Detection Analytics** dashboards.
 
 ## Final Enterprise SOC - Overview Dashboard
 
-The completed **Enterprise SOC - Overview** dashboard combines all custom visualizations created throughout this section into a single monitoring interface.
+The completed **Enterprise SOC - Overview** dashboard serves as the primary entry point for monitoring the Enterprise SOC Lab.
 
-It provides SOC analysts with real-time visibility into alert severity, endpoint status, alert trends, detection rules, and MITRE ATT&CK techniques, making it the primary dashboard for monitoring the Enterprise SOC Lab.
+It provides SOC analysts with real-time visibility into overall alert volume, alert severity, endpoint availability, and alert activity trends. This high-level operational view enables analysts to quickly evaluate the security posture of the environment before proceeding to specialized dashboards for threat analysis, endpoint monitoring, and incident investigation.
 
 ### Screenshot
 
 **Final Enterprise SOC - Overview Dashboard**
 
 ```text
-dashboards/screenshots/dashboard-01/final-enterprise-soc-overview-dashboard.png
+dashboards/screenshots/dashboard-01/34-final-enterprise-soc-overview-dashboard.png
 ```
