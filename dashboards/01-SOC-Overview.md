@@ -512,7 +512,8 @@ This allows SOC analysts to quickly monitor the number of alerts across each sev
 
 ```text
 dashboards/screenshots/dashboard-01/23-enterprise-soc-overview-dashboard.png
-
+```
+---
 
 # Widget 03 - Active Agents
 

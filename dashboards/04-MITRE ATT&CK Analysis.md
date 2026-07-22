@@ -263,3 +263,347 @@ The widget displays the most frequently detected MITRE ATT&CK techniques, enabli
 ```text
 dashboards/screenshots/dashboard-04/07-top-mitre-techniques-widget.png
 ```
+
+---
+
+# Widget 02 - Top MITRE ATT&CK Tactics
+
+## Objective
+
+The **Top MITRE ATT&CK Tactics** widget displays the MITRE ATT&CK tactics that generated the highest number of security alerts during the selected time range.
+
+This visualization helps SOC analysts understand the primary stages of the attack lifecycle, identify the most frequently observed adversary objectives, and improve threat hunting and incident investigation.
+
+---
+
+## Why This Visualization?
+
+MITRE ATT&CK tactics represent the adversary's tactical objectives during different stages of an attack, such as Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Collection, Exfiltration, and Impact.
+
+Monitoring the most frequently detected tactics enables SOC analysts to quickly understand which phases of the attack lifecycle are most active within the environment, evaluate detection coverage, and prioritize security investigations.
+
+By visualizing MITRE ATT&CK tactics, analysts gain a high-level understanding of attacker objectives without reviewing individual security alerts.
+
+---
+
+## Visualization Configuration
+
+### Step 1 - Create a New Visualization
+
+From the dashboard, click:
+
+```text
+Create visualization
+```
+
+Select the following visualization type:
+
+```text
+Horizontal Bar
+```
+
+A Horizontal Bar chart provides better readability for MITRE ATT&CK tactic names and makes it easier to compare the most frequently detected tactics.
+
+### Screenshot
+
+**Image #08**
+
+```text
+dashboards/screenshots/dashboard-04/08-select-horizontal-bar.png
+```
+
+---
+
+### Step 2 - Configure the Visualization
+
+Use the following configuration.
+
+**Metric**
+
+```text
+Count
+```
+
+---
+
+**Buckets**
+
+Aggregation
+
+```text
+Terms
+```
+
+Field
+
+```text
+rule.mitre.tactic
+```
+
+Order By
+
+```text
+Metric: Count
+```
+
+Order
+
+```text
+Descending
+```
+
+Size
+
+```text
+10
+```
+
+This configuration groups security alerts by their associated MITRE ATT&CK tactic and displays the ten most frequently detected tactics during the selected time range.
+
+### Screenshot
+
+**Image #09**
+
+```text
+dashboards/screenshots/dashboard-04/09-configure-top-mitre-tactics.png
+```
+
+---
+
+### Step 3 - Save the Visualization
+
+Save the visualization using the following details.
+
+**Title**
+
+```text
+SOC - Top MITRE ATT&CK Tactics
+```
+
+**Description**
+
+```text
+Displays the top 10 MITRE ATT&CK tactics associated with security alerts. This visualization helps SOC analysts identify the most frequently observed adversary objectives and evaluate detection coverage.
+```
+
+Enable:
+
+```text
+Add to Dashboards after saving
+```
+
+### Screenshot
+
+**Image #10**
+
+```text
+dashboards/screenshots/dashboard-04/10-save-top-mitre-tactics.png
+```
+
+---
+
+## Final Result
+
+After saving the visualization, it is added to the **Enterprise SOC - MITRE ATT&CK Analysis** dashboard.
+
+The widget displays the most frequently detected MITRE ATT&CK tactics, enabling SOC analysts to understand attacker objectives, identify active phases of the attack lifecycle, evaluate detection coverage, and support threat hunting and incident investigations.
+
+### Screenshot
+
+**Image #11**
+
+```text
+dashboards/screenshots/dashboard-04/11-top-mitre-tactics-widget.png
+```
+
+---
+
+# Widget 03 - Top MITRE ATT&CK Technique IDs
+
+## Objective
+
+The **Top MITRE ATT&CK Technique IDs** widget displays the MITRE ATT&CK Technique IDs that generated the highest number of security alerts during the selected time range.
+
+This visualization helps SOC analysts quickly identify the most frequently detected MITRE ATT&CK Technique IDs, correlate alerts with the MITRE ATT&CK framework, and support threat hunting and incident investigations.
+
+---
+
+## Why This Visualization?
+
+Each MITRE ATT&CK Technique is assigned a unique identifier (for example, **T1059**, **T1547**, or **T1003**) that is widely used across security reports, threat intelligence platforms, and incident response documentation.
+
+Monitoring the most frequently detected Technique IDs enables SOC analysts to quickly correlate security alerts with the MITRE ATT&CK framework, understand attacker behavior, and investigate related techniques without manually reviewing individual alerts.
+
+This visualization provides a standardized view of attacker techniques, making it easier to communicate findings, perform threat hunting, and reference MITRE ATT&CK documentation during investigations.
+
+---
+
+## Visualization Configuration
+
+### Step 1 - Create a New Visualization
+
+From the dashboard, click:
+
+```text
+Create visualization
+```
+
+Select the following visualization type:
+
+```text
+Pie
+```
+
+### Screenshot
+
+**Image #12**
+
+```text
+dashboards/screenshots/dashboard-04/12-select-pie-chart.png
+```
+
+---
+
+### Step 2 - Configure the Visualization
+
+Use the following configuration.
+
+**Metric**
+
+```text
+Count
+```
+
+---
+
+**Buckets**
+
+Aggregation
+
+```text
+Terms
+```
+
+Field
+
+```text
+rule.mitre.id
+```
+
+Order By
+
+```text
+Metric: Count
+```
+
+Order
+
+```text
+Descending
+```
+
+Size
+
+```text
+10
+```
+
+This configuration groups security alerts by their associated MITRE ATT&CK Technique ID and displays the ten most frequently detected Technique IDs during the selected time range.
+
+### Screenshot
+
+**Image #13**
+
+```text
+dashboards/screenshots/dashboard-04/13-top-mitre-technique-ids-configuration.png
+```
+
+---
+
+### Step 3 - Save the Visualization
+
+Save the visualization using the following details.
+
+**Title**
+
+```text
+SOC - Top MITRE ATT&CK Technique IDs
+```
+
+**Description**
+
+```text
+Displays the top 10 MITRE ATT&CK Technique IDs associated with security alerts. This visualization helps SOC analysts identify the most frequently detected attacker techniques and correlate alerts with the MITRE ATT&CK framework.
+```
+
+Enable:
+
+```text
+Add to Dashboards after saving
+```
+
+### Screenshot
+
+**Image #14**
+
+```text
+dashboards/screenshots/dashboard-04/14-save-top-mitre-technique-ids.png
+```
+
+---
+
+## Final Result
+
+After saving the visualization, it is added to the **Enterprise SOC - MITRE ATT&CK Analysis** dashboard.
+
+The widget displays the most frequently detected MITRE ATT&CK Technique IDs, enabling SOC analysts to quickly correlate security alerts with the MITRE ATT&CK framework, identify recurring attacker techniques, and support threat hunting and incident investigations.
+
+### Screenshot
+
+**Image #15**
+
+```text
+dashboards/screenshots/dashboard-04/15-top-mitre-technique-ids-widget.png
+```
+
+---
+
+# Final Dashboard Documentation
+
+The **Enterprise SOC - MITRE ATT&CK Analysis** dashboard provides SOC analysts with a centralized view of MITRE ATT&CK mappings generated by Wazuh security alerts. By organizing detections according to the MITRE ATT&CK framework, the dashboard enables analysts to understand attacker behavior, identify the stages of an attack, and correlate security events with known adversary techniques.
+
+The dashboard includes three visualizations that present different perspectives of MITRE ATT&CK data:
+
+- **Top MITRE ATT&CK Techniques** identifies the most frequently detected attacker techniques observed in the environment.
+- **Top MITRE ATT&CK Tactics** highlights the attack phases most commonly associated with security alerts.
+- **Top MITRE ATT&CK Technique IDs** displays the MITRE ATT&CK Technique IDs that occur most frequently, allowing analysts to quickly correlate detections with the MITRE ATT&CK framework and supporting documentation.
+
+Together, these visualizations help SOC analysts:
+
+- Monitor attacker behavior using the MITRE ATT&CK framework.
+- Identify the most frequently observed attack techniques and tactics.
+- Correlate alerts with standardized MITRE ATT&CK Technique IDs.
+- Support threat hunting and incident investigations.
+- Improve security reporting and communication using a globally recognized attack framework.
+
+This dashboard provides valuable operational visibility into adversary behavior and helps security teams investigate, prioritize, and respond to threats more effectively.
+
+---
+
+# Final Dashboard
+
+After adding all visualizations, the completed dashboard contains the following widgets:
+
+| Widget | Visualization |
+|---------|---------------|
+| Top MITRE ATT&CK Techniques | Horizontal Bar Chart |
+| Top MITRE ATT&CK Tactics | Horizontal Bar Chart |
+| Top MITRE ATT&CK Technique IDs | Pie Chart |
+
+### Screenshot
+
+**Image #16**
+
+```text
+dashboards/screenshots/dashboard-04/16-final-dashboard.png
+```
