@@ -19,3 +19,13 @@ Each command includes a brief description of its purpose, the investigation cate
 | Command | Purpose | Category | Investigation |
 |----------|---------|----------|---------------|
 | `hostname` | Displays the name of the local computer (hostname). | Host Enumeration | Investigation-02-Hostname.md |
+
+---
+
+## Investigation Systeminfo
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `systeminfo` | Displays detailed information about the local computer, operating system, hardware, installed updates, network configuration, and system environment. | System Information Discovery | Investigation-03-Systeminfo.md |
+
+---

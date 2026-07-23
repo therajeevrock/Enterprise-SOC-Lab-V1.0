@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | References |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -114,4 +114,4 @@ Official documentation has been preferred wherever possible to ensure the inform
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the References guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the References guide. |

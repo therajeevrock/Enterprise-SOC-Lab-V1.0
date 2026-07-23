@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab       |
 | **Document Name** | Windows Agent Deployment |
 | **Version**       | 1.0                      |
-| **Author**        | Rajeev Kumar             |
+| **Author**        | Rajeev Rock              |
 | **Status**        | Published                |
 | **Last Updated**  | July 2026                |
 
@@ -351,4 +351,4 @@ These events will later be collected by the Wazuh Agent and analyzed within the 
 
 | Version | Date      | Author       | Description                                            |
 |---------|-----------|--------------|--------------------------------------------------------|
-| 1.0     | July 2026 | Rajeev Kumar | Initial release of the Windows Agent Deployment guide. |
+| 1.0     | July 2026 | Rajeev Rock | Initial release of the Windows Agent Deployment guide. |

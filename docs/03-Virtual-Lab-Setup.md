@@ -23,7 +23,7 @@
 | **Project**       | Enterprise SOC Lab |
 | **Document Name** | Virtual Lab Setup |
 | **Version**       | 1.0 |
-| **Author**        | Rajeev Kumar |
+| **Author**        | Rajeev Rock |
 | **Category**      | Documentation |
 | **Status**        | Published |
 | **Last Updated**  | July 2026 |

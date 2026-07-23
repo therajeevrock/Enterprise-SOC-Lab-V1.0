@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab  |
 | **Document Name** | Sysmon Installation |
 | **Version**       | 1.0                 |
-| **Author**        | Rajeev Kumar        |
+| **Author**        | Rajeev Rock         |
 | **Status**        | Published           |
 | **Last Updated**  | July 2026           |
 
@@ -469,4 +469,4 @@ You will configure the Wazuh Agent to collect Sysmon events and verify that the 
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Sysmon Installation guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Sysmon Installation guide. |

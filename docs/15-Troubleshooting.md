@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | Troubleshooting |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -377,4 +377,4 @@ It summarizes practical experience, common mistakes, best practices, and recomme
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Troubleshooting guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Troubleshooting guide. |

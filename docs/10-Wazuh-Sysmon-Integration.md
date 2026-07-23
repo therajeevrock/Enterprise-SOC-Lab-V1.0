@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab       |
 | **Document Name** | Wazuh–Sysmon Integration |
 | **Version**       | 1.0                      |
-| **Author**        | Rajeev Kumar             |
+| **Author**        | Rajeev Rock              |
 | **Status**        | Published                |
 | **Last Updated**  | July 2026                |
 
@@ -427,5 +427,5 @@ Rather than focusing on installation, it explains how Sysmon generates Windows t
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Wazuh–Sysmon Integration guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Wazuh–Sysmon Integration guide. |
 

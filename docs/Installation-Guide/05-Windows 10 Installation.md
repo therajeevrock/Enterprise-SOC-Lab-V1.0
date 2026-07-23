@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab      |
 | **Document Name** | Windows 10 Installation |
 | **Version**       | 1.0                     |
-| **Author**        | Rajeev Kumar            |
+| **Author**        | Rajeev Rock             |
 | **Status**        | Published               |
 | **Last Updated**  | July 2026               |
 
@@ -507,4 +507,4 @@ Kali Linux will simulate real-world attacks against the Windows 10 endpoint, all
 
 | Version | Date      | Author       | Description                                           |
 | ------- | --------- | ------------ | ----------------------------------------------------- |
-| 1.0     | July 2026 | Rajeev Kumar | Initial release of the Windows 10 Installation guide. |
+| 1.0     | July 2026 | Rajeev Rock | Initial release of the Windows 10 Installation guide. |

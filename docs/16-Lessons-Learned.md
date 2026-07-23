@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | Lessons Learned |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -137,4 +137,4 @@ It includes official documentation, standards, and technical resources that were
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Lessons Learned guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Lessons Learned guide. |

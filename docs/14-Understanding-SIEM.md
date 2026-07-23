@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | Understanding SIEM |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -238,4 +238,4 @@ This chapter documents those issues, explains their root causes, and provides th
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Understanding SIEM guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Understanding SIEM guide. |

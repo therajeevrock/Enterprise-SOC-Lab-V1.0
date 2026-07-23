@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab |
 | **Document Name** | Wazuh Installation |
 | **Version**       | 1.0                |
-| **Author**        | Rajeev Kumar       |
+| **Author**        | Rajeev Rock        |
 | **Status**        | Published          |
 | **Last Updated**  | July 2026          |
 
@@ -352,4 +352,4 @@ The next chapter focuses on deploying the Wazuh Agent on the Windows 10 endpoint
 
 | Version | Date      | Author       | Description                                      |
 | ------- | --------- | ------------ | ------------------------------------------------ |
-| 1.0     | July 2026 | Rajeev Kumar | Initial release of the Wazuh Installation guide. |
+| 1.0     | July 2026 | Rajeev Rock | Initial release of the Wazuh Installation guide. |

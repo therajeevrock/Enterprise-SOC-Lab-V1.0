@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | Understanding Sysmon |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -256,4 +256,4 @@ In that chapter, you will learn how Wazuh receives, processes, stores, and displ
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Understanding Sysmon guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Understanding Sysmon guide. |

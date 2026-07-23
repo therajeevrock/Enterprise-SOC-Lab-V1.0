@@ -22,7 +22,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document** | Investigation Guide |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Category** | Investigation Guide |
 | **Last Updated** | July 2026 |
 

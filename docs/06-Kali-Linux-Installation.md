@@ -24,7 +24,7 @@
 | **Project**       | Enterprise SOC Lab      |
 | **Document Name** | Kali Linux Installation |
 | **Version**       | 1.0                     |
-| **Author**        | Rajeev Kumar            |
+| **Author**        | Rajeev Rock            |
 | **Status**        | Published               |
 | **Last Updated**  | July 2026               |
 
@@ -345,4 +345,4 @@ The next chapter focuses on installing the Wazuh platform on the Ubuntu Server c
 
 | Version | Date      | Author       | Description                                           |
 | ------- | --------- | ------------ | ----------------------------------------------------- |
-| 1.0     | July 2026 | Rajeev Kumar | Initial release of the Kali Linux Installation guide. |
+| 1.0     | July 2026 | Rajeev Rock | Initial release of the Kali Linux Installation guide. |

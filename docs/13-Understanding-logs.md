@@ -24,7 +24,7 @@
 | **Project** | Enterprise SOC Lab |
 | **Document Name** | Understanding Logs |
 | **Version** | 1.0 |
-| **Author** | Rajeev Kumar |
+| **Author** | Rajeev Rock |
 | **Status** | Published |
 | **Last Updated** | July 2026 |
 
@@ -231,4 +231,4 @@ You will learn what a Security Information and Event Management (SIEM) platform 
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Understanding Logs guide. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Understanding Logs guide. |

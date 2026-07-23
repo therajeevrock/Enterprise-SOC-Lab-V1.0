@@ -23,7 +23,7 @@
 | **Project**       | Enterprise SOC Lab |
 | **Document Name** | Lab Architecture   |
 | **Version**       | 1.0                |
-| **Author**        | Rajeev Kumar       |
+| **Author**        | Rajeev Rock       |
 | **Category**      | Documentation      |
 | **Status**        | Published          |
 | **Last Updated**  | July 2026          |
@@ -701,4 +701,4 @@ This preparation helps avoid installation issues and ensures that every componen
 
 | Version | Date | Author | Description |
 |---------|------|--------|-------------|
-| 1.0 | July 2026 | Rajeev Kumar | Initial release of the Enterprise SOC Lab Architecture documentation. |
+| 1.0 | July 2026 | Rajeev Rock | Initial release of the Enterprise SOC Lab Architecture documentation. |

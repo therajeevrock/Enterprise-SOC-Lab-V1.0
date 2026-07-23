@@ -25,7 +25,7 @@
 | **Project**       | Enterprise SOC Lab         |
 | **Document Name** | Ubuntu Server Installation |
 | **Version**       | 1.0                        |
-| **Author**        | Rajeev Kumar               |
+| **Author**        | Rajeev Rock               |
 | **Status**        | Published                  |
 | **Last Updated**  | July 2026                  |
 
@@ -385,4 +385,4 @@ The next chapter covers the installation and initial configuration of Windows 10
 
 | Version | Date      | Author       | Description                                              |
 | ------- | --------- | ------------ | -------------------------------------------------------- |
-| 1.0     | July 2026 | Rajeev Kumar | Initial release of the Ubuntu Server Installation guide. |
+| 1.0     | July 2026 | Rajeev Rock | Initial release of the Ubuntu Server Installation guide. |
