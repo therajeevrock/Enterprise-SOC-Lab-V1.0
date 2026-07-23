@@ -11,3 +11,11 @@ Each command includes a brief description of its purpose, the investigation cate
 | Command | Purpose | Category | Investigation |
 |----------|---------|----------|---------------|
 | `whoami` | Displays the currently logged-on user account. | User Enumeration | Investigation-01-Whoami.md |
+
+---
+
+## Investigation Hostname
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `hostname` | Displays the name of the local computer (hostname). | Host Enumeration | Investigation-02-Hostname.md |

@@ -74,11 +74,11 @@ desktop-8gb0j2a\oxhun
 
 ---
 
-# Alert Information
+# Event Information
 
 | Property | Value |
 |----------|-------|
-| Alert Type | Process Create |
+| Event Type | Process Create |
 | Event ID | 1 |
 | Severity | Informational |
 | Process | whoami.exe |
@@ -100,7 +100,7 @@ The alert indicates that the Windows **whoami.exe** process was executed on the 
 
 The process was launched from **Command Prompt (cmd.exe)** by the logged-on user **DESKTOP-8GB0J2A\Oxhun**.
 
-The executable was started from the default Windows System32 directory, and Sysmon successfully recorded the activity as **Event ID 1 (Process Create)**.
+The executable was started from the default Windows System32 directory, and Sysmon successfully recorded the activity as **Event ID 1 (Process Create)**. The event was indexed in the **wazuh-archives** index for threat hunting and investigation purposes.
 
 ---
 
@@ -119,7 +119,7 @@ The executable was started from the default Windows System32 directory, and Sysm
 | Company | Microsoft Corporation |
 | Event Time | 2026-07-15 10:47:37.594 UTC |
 
-The event confirms that the process was executed successfully without any unusual command-line arguments or suspicious execution path.
+The event confirms that the legitimate Windows **whoami.exe** binary was executed from the trusted **System32** directory. The parent process (`cmd.exe`) and command line are consistent with normal interactive command execution, and no suspicious arguments or execution paths were observed.
 
 > 📸 **Screenshot Required**
 >
@@ -136,7 +136,7 @@ The event confirms that the process was executed successfully without any unusua
 | 2026-07-15 10:47:37.594 | User executed `whoami` |
 | 2026-07-15 10:47:37.594 | Windows created the process |
 | 2026-07-15 10:47:37.611 | Sysmon generated Event ID 1 |
-| 2026-07-15 10:47:38.584 | Wazuh received and indexed the event |
+| 2026-07-15 10:47:38.584 | Wazuh received and indexed the event into `wazuh-archives` |
 
 ---
 
@@ -165,10 +165,13 @@ The event confirms that the process was executed successfully without any unusua
 The investigation confirmed the following:
 
 - The process executed successfully.
-- The executable path is the legitimate Windows System32 directory.
+- The executable is the legitimate Microsoft Windows binary.
+- The executable path is the trusted Windows System32 directory.
 - The parent process (`cmd.exe`) is expected.
 - The command line contains only `whoami`.
 - The activity was performed by the logged-on user.
+- The event exists in the **wazuh-archives** index.
+- No detection rule was triggered; therefore, no event was generated in the **wazuh-alerts** index.
 - No suspicious indicators were identified.
 
 ---
@@ -196,6 +199,9 @@ Although the command is mapped to **MITRE ATT&CK T1033 (Discovery)**, the observ
 - The parent process is Command Prompt.
 - No suspicious behavior was observed before or after the process execution.
 
+This event is recorded by Sysmon and indexed in the **wazuh-archives** index. Since no Wazuh detection rule matches this activity, it does not generate an alert in the **wazuh-alerts** index.
+
+
 ---
 
 # Conclusion
@@ -203,6 +209,8 @@ Although the command is mapped to **MITRE ATT&CK T1033 (Discovery)**, the observ
 The alert was investigated and determined to be **Benign**.
 
 The event represents the normal execution of the Windows **whoami** command. No evidence of malicious activity, privilege escalation, or suspicious process behavior was identified during the investigation.
+
+The event was successfully collected by Sysmon and stored in the **wazuh-archives** index for threat hunting and forensic analysis.
 
 ---
 
