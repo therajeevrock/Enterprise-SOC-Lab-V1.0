@@ -78,7 +78,7 @@ Each command includes a brief description of its purpose, the investigation cate
 
 | Command | Purpose | Category | Investigation |
 |----------|---------|----------|---------------|
-| `net user` | Displays all local user accounts on the system. | Account Discovery | Investigation-08-Net-User.md |
+| `net user` | Displays all local user accounts on the system. | Account Discovery | Investigation-09-Net-User.md |
 | `net user <username>` | Displays detailed information about a specific local user account. | Account Discovery | Investigation-09-Net-User.md |
 
 ---

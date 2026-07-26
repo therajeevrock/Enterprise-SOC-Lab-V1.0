@@ -1,4 +1,4 @@
-# Investigation 01 - Whoami Process Investigation
+# Investigation-01 - Whoami Process Investigation
 
 
 # Investigation Information
