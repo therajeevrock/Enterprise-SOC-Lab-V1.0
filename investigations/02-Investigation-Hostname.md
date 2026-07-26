@@ -1,6 +1,5 @@
-# Investigation 02 - Hostname
+# Investigation 02 - Hostname Process Investigation
 
----
 
 # Investigation Information
 

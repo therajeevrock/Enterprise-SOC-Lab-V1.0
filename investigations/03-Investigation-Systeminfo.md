@@ -1,6 +1,5 @@
 # Investigation 03 - Systeminfo
 
----
 
 # Investigation Infomation
 
