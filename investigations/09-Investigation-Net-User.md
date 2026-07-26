@@ -7,11 +7,11 @@
 | **Investigation ID** | 09 |
 | **Investigation Name** | Net User Process Investigation |
 | **Category** | Account Discovery |
-| **Event Category** | 
+| **Event Category** | Process Creation |
 | **Platform** | Windows 10 |
 | **Event Source** | Microsoft-Windows-Sysmon |
 | **Event ID** | 1 (Process Create) |
-| **MITRE ATT&CK** | T1087 Account Discovery  |
+| **MITRE ATT&CK** | T1087 – Account Discovery |
 | **Difficulty** | Beginner |
 
 ---
@@ -56,7 +56,7 @@ The Windows **net user** command was executed on the Windows 10 endpoint to gene
 Commands Executed:
 
 ```cmd
-route
+net user
 ```
 
 Observed Output:
@@ -73,7 +73,7 @@ The command completed successfully.
 >
 > **Title:** Net User Command Execution
 >
-> **Save As:** `screenshots/investigations/route/01-command.png`
+> **Save As:** `screenshots/investigations/net-user/01-command.png`
 
 ---
 
@@ -101,12 +101,14 @@ The command completed successfully.
 | User | DESKTOP-8GB0J2A\Oxhun |
 | Detection Source | Wazuh Alerts |
 | Wazuh Rule IDs | 92031, 92033 |
+| Computer | DESKTOP-8GB0J2A |
+| Agent | SOC-Win10 |
 
 > 📸 **Screenshot Required**
 >
-> **Title:** Route Event in Wazuh Discover
+> **Title:** Net User Event in Wazuh Discover
 >
-> **Save As:** `screenshots/investigations/route/02-wazuh-event.png`
+> **Save As:** `screenshots/investigations/net-user/02-wazuh-event.png`
 
 ---
 
@@ -222,6 +224,11 @@ The second execution launched the same **net.exe** utility from an elevated **Wi
 - Both events were mapped to **MITRE ATT&CK T1087 (Account Discovery)**.
 - The PowerShell execution was additionally mapped to **T1059.001 (PowerShell)**.
 - No malicious activity was identified during the investigation.
+- The executable was launched from the trusted C:\Windows\System32 directory.
+- Both executions were performed by the logged-on user DESKTOP-8GB0J2A\Oxhun.
+- The parent processes were Command Prompt and Windows PowerShell.
+- The activity generated Level 3 Wazuh alerts.
+- No suspicious command-line arguments or abnormal execution paths were observed.
 
 ---
 
@@ -234,6 +241,7 @@ The second execution launched the same **net.exe** utility from an elevated **Wi
 | Risk | Informational |
 | Detection Status | Successfully Detected by Wazuh |
 | Investigation Status | Closed |
+| Escalation Required | No |
 
 ---
 

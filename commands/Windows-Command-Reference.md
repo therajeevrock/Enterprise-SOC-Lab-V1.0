@@ -82,3 +82,12 @@ Each command includes a brief description of its purpose, the investigation cate
 | `net user <username>` | Displays detailed information about a specific local user account. | Account Discovery | Investigation-09-Net-User.md |
 
 ---
+
+## Investigation Net LocalGroup
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net localgroup` | Displays all local security groups configured on the Windows system. | Permission Groups Discovery | Investigation-10-Net-LocalGroup.md |
+| `net localgroup <groupname>` | Displays the members of a specific local security group. | Permission Groups Discovery | Investigation-10-Net-LocalGroup.md |
+
+---
