@@ -77,13 +77,15 @@ The command completed successfully.
 
 ---
 
-# Event Information
-
 > **Note**
 >
 > The execution of the Windows `net user` command generated Wazuh alerts because the activity matched built-in detection rules for Account Discovery.
 >
 > The process creation event was recorded by Sysmon (Event ID 1) and indexed in both the `wazuh-alerts` and `wazuh-archives` indices.
+
+---
+
+# Event Information
 
 | Property | Value |
 |----------|-------|
@@ -197,11 +199,11 @@ The second execution launched the same **net.exe** utility from an elevated **Wi
 
 | Question | Analysis |
 |----------|----------|
-| Who | User **DESKTOP-8GB0J2A\Oxhun** executed the command. |
-| What | The `net user` command was executed to enumerate local user accounts. |
-| When | 2026-07-26 05:31:04 UTC (Command Prompt) and 2026-07-26 05:33:00 UTC (Administrator PowerShell). |
-| Where | Windows 10 endpoint monitored by Sysmon and Wazuh. |
-| Why | The activity was performed to validate Wazuh detections and understand Account Discovery events within the SOC lab environment. |
+| **Who** | User **DESKTOP-8GB0J2A\Oxhun** executed the command. |
+| **What** | The `net user` command was executed to enumerate local user accounts. |
+| **When** | 2026-07-26 05:31:04 UTC (Command Prompt) and 2026-07-26 05:33:00 UTC (Administrator PowerShell). |
+| **Where** | Windows 10 endpoint monitored by Sysmon and Wazuh. |
+| **Why** | The activity was performed to validate Wazuh detections and understand Account Discovery events within the SOC lab environment. |
 
 ---
 
