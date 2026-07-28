@@ -107,3 +107,55 @@ Each command includes a brief description of its purpose, the investigation cate
 |----------|---------|----------|---------------|
 | `net view` | Displays a list of computers in the current domain or workgroup. | Network Share Discovery | 12-Investigation-Net-View.md |
 | `net view \\<ComputerName>` | Displays the shared resources available on a specified remote computer. | Network Share Discovery | 12-Investigation-Net-View.md |
+
+---
+
+## Investigation Net Use
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net use` | Displays active network connections and mapped drives. It is also used to connect, disconnect, and manage shared network resources. | Network Share Connection Discovery | 14-Investigation-Net-Use.md |
+| | `net use \\<ComputerName>\<ShareName>` | Connects to a remote shared resource using the specified computer and share name. | Network Share Connection Discovery | 14-Investigation-Net-Use.md |
+
+---
+
+## Investigation Net Session
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net session` | Displays active sessions established between the local computer and remote clients. | Session Discovery | 15-Investigation-Net-Session.md |
+| `net session \\<ComputerName>` | Displays session information for a specified remote computer. | Session Discovery | 15-Investigation-Net-Session.md |
+
+---
+
+## Investigation Net Start
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net start` | Displays all currently running Windows services. It can also be used to start a specific service. | Service Discovery | 16-Investigation-Net-Start.md |
+| `net start <ServiceName>` | Starts the specified Windows service if it is not already running. | Service Discovery | 16-Investigation-Net-Start.md |
+
+---
+
+## Investigation Net Accounts
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net accounts` | Displays the current password and logon policy configured on the local computer or domain. | Account Policy Discovery | 17-Investigation-Net-Accounts.md |
+| `net accounts /domain` | Displays the password and logon policy for the current domain. | Account Policy Discovery | 17-Investigation-Net-Accounts.md |
+
+---
+
+## Investigation Net Config Workstation
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net config workstation` | Displays configuration information for the Workstation service, including computer name, logged-on user, and workstation settings. | System Configuration Discovery | 18-Investigation-Net-Config-Workstation.md |
+
+---
+
+## Investigation Net Config Server
+
+| Command | Purpose | Category | Investigation |
+|----------|---------|----------|---------------|
+| `net config server` | Displays configuration information for the Server service, including server settings and service parameters. | System Configuration Discovery | 19-Investigation-Net-Config-Server.md |
